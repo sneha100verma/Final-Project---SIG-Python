@@ -1,0 +1,24 @@
+<div class="row">
+    {% for post in posts %}
+        <div class="post-wrapper col-sm-4 py-2">
+            <div class="card-post box-shadow">
+                <a href="{{post.get_absolute_url}}">
+                <img class="card-img-top" src="https://picsum.photos/id/{{post.id}}/500/350" alt="{{post.title}}"></a>
+                <div class="card-body">
+                    <a href="{{post.get_absolute_url}}">
+                        <div class="card-title">{{post.title|truncatewords:"3"}}</div>
+                    </a>
+                    <div class="card-subtext">
+                        <a href="{{post.author.get_absolute_url}}" class="">{{post.author.username}}</a>
+                    </div>
+                    <div class="card-text">
+                        {{post.body|truncatewords:"30"}}
+                    </div>
+                    <div class="card-subtext">
+                        {% include 'blog/snippet_tag_labels.html' with tags=post.tags.all %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>

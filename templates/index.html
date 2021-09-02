@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Ashton Bringham
+{% endblock title %}
+
+{% block content %}
+
+<div class="card about-card">
+    <div class="row no-gutters">
+        <div class="col-sm-8 col-md-6">
+            <img src="{% static 'images/ashton.jpg' %}" alt="login" class="about-card-img">
+        </div>
+        <div class="col-sm-8 col-md-6">
+            <div class="card-body">
+                <h2> Ashton Bringham <h2>
+                <div class="about-card-description">
+                    <em> I build websites that speak. </em> 
+                    <br> <br> <br>
+                    I am a west coast-based graphic artist who uses Graphic Design, Illustration, Creative Direction and Brand Strategy to visually build creative rebellious brands beyond a website. I have been employed as a web developer for the last ten years. 
+                    <br> <br>
+                    If you want your clients to take a look at your website and decide that - Yes! They want your product, at the first glance. Then you have come to the right place. 
+                </div>
+                <a class="btn color-dark" href="#">Hire Me!</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}

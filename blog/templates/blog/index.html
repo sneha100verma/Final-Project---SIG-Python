@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Blog
+{% endblock %}
+
+{% block content %}
+    <h3> Latest Posts </h3>
+
+    {% include 'blog/snippet_post_list.html' %}
+{% endblock %}
+
+
+{% block footer %}
+    <footer class="text-muted">
+        <div class="container">
+            <p class="float-right back-to-top">
+            <a href="#">Back to top ⬆</a>
+            </p>
+        </div>
+    </footer> 
+{% endblock footer %}
